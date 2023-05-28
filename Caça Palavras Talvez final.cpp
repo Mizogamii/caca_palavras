@@ -61,7 +61,7 @@ int main(){
 		}
 		
 		for(contador = 0; contador < tentativas ; contador++){
-			if(strcmp(palavraDigitada, todasDigitadas[contador]) == 0){
+			if(strcmp(palavraDigitada, digitadasCertas[contador]) == 0){
 				repetiu = true;
 			}
 		}
