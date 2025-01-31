@@ -4,6 +4,7 @@
 #include <time.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdbool.h>
 
 void opcao0(), opcao1(), opcao2(), imprimirExplicacao(), imprimirQuadro(), colocandoPalavras();
 
@@ -89,7 +90,7 @@ int main(){
 		}
 
 		if(repetiu == true){
-			printf("\nATENÇÃO! Você digitou uma palavra repetida!");
+			printf("\nATENÃ‡ÃƒO! VocÃª digitou uma palavra repetida!");
 			numeroCorretas--;
 		}
 		
@@ -129,16 +130,16 @@ int main(){
 	
 	imprimirQuadro();
 
-	printf("\nPARABÉNS! Completou o caça palavras!!!");
+	printf("\nPARABÃŠNS! Completou o caÃ§a palavras!!!");
 	
 	if(erros != 0){
 		if(erros > 1){
-			printf("\n\nVocê digitou %d palavras erradas durante o jogo!", erros);	
+			printf("\n\nVocÃª digitou %d palavras erradas durante o jogo!", erros);	
 		}else{
-			printf("\n\nVocê digitou %d palavra errada durante o jogo!", erros);	
+			printf("\n\nVocÃª digitou %d palavra errada durante o jogo!", erros);	
 		}
 	}else{
-		printf("\n\nVocê não digitou palavras erradas!!");
+		printf("\n\nVocÃª nÃ£o digitou palavras erradas!!");
 	}
 	printf("\n---------------------------------------------------------");
 }
@@ -289,7 +290,7 @@ void opcao1(void){ //Frutas
 	quadro[0][9] = 'A';
 }
 
-void opcao2(void){ //Países
+void opcao2(void){ //PaÃ­ses
 
 	strcpy(palavras[0], "BRASIL");
 	strcpy(palavras[1], "HOLANDA");
@@ -333,7 +334,7 @@ void opcao2(void){ //Países
 	quadro[9][3] = 'H';
 	quadro[9][2] = 'A';
 	
-	//5. Tailândia
+	//5. TailÃ¢ndia
 	quadro[0][0] = 'T';
 	quadro[0][1] = 'A';
 	quadro[0][2] = 'I';
@@ -344,7 +345,7 @@ void opcao2(void){ //Países
 	quadro[0][7] = 'I';
 	quadro[0][8] = 'A';
 	
-	// 6. Austrália
+	// 6. AustrÃ¡lia
 	quadro[1][2] = 'U';
 	quadro[3][4] = 'T';
 	quadro[4][5] = 'R';
@@ -365,11 +366,11 @@ void opcao2(void){ //Países
 void imprimirExplicacao(void){ 
 
 	printf("*********************************************************\n");
-	printf("                      CAÇA PALAVRAS                      \n");
+	printf("                      CAÃ‡A PALAVRAS                      \n");
 	printf("*********************************************************\n");
-	printf(" Quando encontrar a palavra, digite sem acentuações.\n");
+	printf(" Quando encontrar a palavra, digite sem acentuaÃ§Ãµes.\n");
 	printf(" Digite apenas 1 palavra de cada vez.\n");
-	printf(" Há 7 palavras no caça palavras.\n");
+	printf(" HÃ¡ 7 palavras no caÃ§a palavras.\n");
 	printf("---------------------------------------------------------");
 }
 
@@ -401,7 +402,7 @@ void colocandoPalavras(void){
 		break;
 		
 		case 2:
-			printf("\n\t\t\t Países");
+			printf("\n\t\t\t PaÃ­ses");
 			opcao2();
 		break;
 		
